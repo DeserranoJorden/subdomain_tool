@@ -24,7 +24,7 @@ echo -e "${GREEN} subdomains found: " $count "${NC}"
 
 ############################
 ##           CTFR         ##
-https://github.com/DeserranoJorden/subdomain_tool############################
+############################
 # https://github.com/UnaPibaGeek/ctfr
 
 touch temp.txt
@@ -107,7 +107,7 @@ mv 'resulsts_'$domain'.txt' $domain/$domain'_results.txt'
 touch $domain/Eyewitness.sh
 echo "#!/bin/bash" >> $domain/Eyewitness.sh
 echo "python3 ../Tools/EyeWitness/Python/EyeWitness.py -f "$domain"_with_protocol.txt --user-agent \"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)\" --web --delay 5 --prepend-https -d "$domain" --timeout 20 > /dev/null 2>&1" >> $domain/Eyewitness.sh
-echo "echo \"Hosting web server with results\""
+echo "echo \"Hosting web server with results\"" >> $domain/Eyewitness.sh
 echo "cd "$domain" && python -m SimpleHTTPServer 8000" >> $domain/Eyewitness.sh
 chmod +x $domain/Eyewitness.sh
 
