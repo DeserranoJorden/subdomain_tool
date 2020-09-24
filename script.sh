@@ -24,7 +24,7 @@ echo -e "${GREEN} subdomains found: " $count "${NC}"
 
 ############################
 ##           CTFR         ##
-############################
+https://github.com/DeserranoJorden/subdomain_tool############################
 # https://github.com/UnaPibaGeek/ctfr
 
 touch temp.txt
@@ -102,6 +102,7 @@ mv 'resulsts_'$domain'.txt' $domain/$domain'_results.txt'
 ############################
 ##  Eyewitness hosting    ##
 ############################
+# https://github.com/FortyNorthSecurity/EyeWitness
 
 touch $domain/Eyewitness.sh
 echo "#!/bin/bash" >> $domain/Eyewitness.sh
