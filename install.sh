@@ -26,6 +26,7 @@ go get -u github.com/tomnomnom/httprobe
 echo " "
 echo " -- Installing subjack"
 go get github.com/haccer/subjack
+curl https://raw.githubusercontent.com/haccer/subjack/master/fingerprints.json -o fingerprints.json
 
 echo " "
 echo " -- Installing Eyewitness"

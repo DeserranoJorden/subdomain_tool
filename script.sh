@@ -67,7 +67,7 @@ echo -e "${GREEN} subdomains found: " $count "${NC}"
 
 echo -e "${RED} testing for valid http(s) servers with httprobe ${NC}"
 
-cat $domain'.txt' | httprobe -prefer-https >> valid_temp.txt
+cat $domain'.txt' | httprobe --prefer-https >> valid_temp.txt
 
 rm $domain'.txt'
 mv valid_temp.txt $domain'_with_protocol.txt'
@@ -92,7 +92,7 @@ echo -e "${GREEN} subdomains found with a web server accessable: " $count "${NC}
 # https://github.com/haccer/subjack
 
 echo " Scanning with subjack to find vulnerable subdomains "
-subjack -w $domain'.txt' -timeout 30 -o 'resulsts_'$domain'.txt' -a -m -v
+subjack -c Tools/fingerprints.json -w $domain'.txt' -timeout 30 -o 'resulsts_'$domain'.txt' -a -m -v
 
 mv $domain'.txt' $domain/$domain'.txt'
 mv $domain'_with_protocol.txt' $domain/$domain'_with_protocol.txt'
