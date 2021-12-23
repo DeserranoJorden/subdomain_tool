@@ -21,7 +21,7 @@ go get -u github.com/tomnomnom/assetfinder
 
 echo " "
 echo " -- Installing httprobe"
-go get -u github.com/tomnomnom/httprobe
+go get -u github.com/tomnomnom/httprobe@master
 
 echo " "
 echo " -- Installing subjack"
